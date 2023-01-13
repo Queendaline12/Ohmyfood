@@ -1,0 +1,87 @@
+@import "config";
+@import "variable";
+@import "home";
+@import "menu";
+@import "responsive";
+
+
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.homepage-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include center;
+    background-color: white;
+    animation: page_loader 7s forwards;
+    animation-delay: 4s;
+
+
+    .spinner {
+        content: "";
+        width: 70px;
+        height: 70px;
+        border: 3px solid #dddddd;
+        border-top-color: #009578;
+        border-radius: 50%;
+        animation: spinner 5s ease infinite;
+
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black
+}
+
+.header-logo {
+    @include center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+}
+
+
+.footer {
+    color: $text-color;
+    padding: 16px 0px 40px 16px;
+    background-color: rgb(56, 54, 54);
+    line-height: 30px;
+
+    &__logo img {
+        width: 150px;
+        filter: invert(100%);
+    }
+
+    &__icon {
+        @include center;
+        justify-content: flex-start;
+        gap: 10px;
+
+    }
+
+    &__contacts {
+
+        >a {
+            color: $text-color;
+        }
+    }
+
+}
