@@ -43,7 +43,7 @@
 
                 &-black {
                     position: absolute;
-                    bottom: 10px;
+                    bottom: 3px;
                 }
             }
 
@@ -142,7 +142,7 @@
 
             &-black {
                 position: absolute;
-                bottom: 10px;
+                bottom: 3px;
             }
 
         }
@@ -161,7 +161,7 @@
     }
 
     .menu__tittle {
-        padding: 0px 150px 0px 150px;
+        padding: 0px 80px 0px 80px;
 
         &--icon {
             font-size: 30px;
@@ -169,15 +169,16 @@
     }
 
     .menu__types {
-        margin: 16px 150px 16px 150px;
+        margin: 16px 80px 16px 80px;
     }
 
     .menu__list {
-        padding: 0px 150px 0px 150px;
+        padding: 0px 80px 0px 80px;
+        flex-direction: row;
     }
 
     .menu__list--items {
-        height: 75px;
+        height: 65px;
     }
 
     .footer {

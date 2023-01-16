@@ -3,6 +3,7 @@
 @import "home";
 @import "menu";
 @import "responsive";
+@import "animation";
 
 
 
@@ -25,11 +26,10 @@ body {
     @include center;
     background-color: white;
     animation: page_loader 7s forwards;
-    animation-delay: 4s;
+    animation-delay: 8s;
 
 
     .spinner {
-        content: "";
         width: 70px;
         height: 70px;
         border: 3px solid #dddddd;

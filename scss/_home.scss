@@ -108,9 +108,7 @@
 }
 
 .menus {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    place-items: center;
+    @include grid-row;
     width: 100%;
     padding-bottom: 30px;
 
@@ -150,31 +148,37 @@
         @include center;
         justify-content: flex-start;
         justify-content: space-between;
-        padding: 0px 30px 0px 16px;
+        padding: 0px 16px 0px 16px;
         position: relative;
 
         &--icon {
-            transition: transform 250ms ease-in-out;
+            transition: transform .6s ease-in-out;
+            overflow: hidden;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            @include center;
 
             &-purple {
-                opacity: 0;
                 color: purple;
+                opacity: 0;
+
 
                 &:hover {
                     opacity: 1;
-                    z-index: 1;
+                    transform: translateY(0);
 
                 }
             }
 
             &-black {
                 position: absolute;
-                bottom: 10px;
+                bottom: 16px;
+
 
                 &:hover {
                     color: purple;
-                    opacity: 0;
-                    z-index: -1;
+                    transform: translateY(100%);
                 }
             }
 
