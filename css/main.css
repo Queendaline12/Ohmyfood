@@ -151,6 +151,9 @@
   padding: 0px 16px 0px 16px;
   position: relative;
 }
+.menu-card__texth2 {
+  font-size: 16px;
+}
 .menu-card__text--icon {
   transition: transform 0.6s ease-in-out;
   overflow: hidden;
@@ -643,6 +646,10 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: black;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .header-logo {
