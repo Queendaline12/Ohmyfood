@@ -35,20 +35,12 @@
         }
 
         &__text {
-            padding: 0px 16px 0px 16px;
+            padding: 0px 16px 0px 5px;
 
             &--icon {
-                font-size: 30px;
-                transition: transform 250ms ease-in-out;
-
-                &-black {
-                    position: absolute;
-                    bottom: 3px;
-                }
+                width: 30px;
+                height: 32px;
             }
-
-
-
         }
     }
 
@@ -137,14 +129,8 @@
 
         &__text--icon {
             font-size: 30px;
-            width: 40px;
-            transition: transform 250ms ease-in-out;
-
-            &-black {
-                position: absolute;
-                bottom: 3px;
-            }
-
+            width: 30px;
+            height: 32px;
         }
 
     }
@@ -177,8 +163,10 @@
         flex-direction: row;
     }
 
-    .menu__list--items {
-        height: 65px;
+    .delay4 {
+        >.price {
+            top: 20px;
+        }
     }
 
     .footer {

@@ -155,23 +155,20 @@
   transition: transform 0.6s ease-in-out;
   overflow: hidden;
   position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 20px;
+  height: 20px;
 }
 .menu-card__text--icon-purple {
-  color: purple;
+  color: #800080;
   opacity: 0;
 }
 .menu-card__text--icon-purple:hover {
-  opacity: 1;
+  -webkit-animation: heart-fadein 5s forwards;
+          animation: heart-fadein 5s forwards;
   transform: translateY(0);
 }
 .menu-card__text--icon-black {
   position: absolute;
-  bottom: 16px;
 }
 .menu-card__text--icon-black:hover {
   color: purple;
@@ -216,34 +213,6 @@
   padding: 0px 30px 0px 16px;
   font-family: "Shrikhand";
 }
-.menu__tittle--icon {
-  transition: transform 0.6s ease-in-out;
-  overflow: hidden;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu__tittle--icon-purple {
-  color: purple;
-  opacity: 0;
-  position: absolute;
-  top: 20px;
-}
-.menu__tittle--icon-purple:hover {
-  opacity: 1;
-  transform: translateY(0);
-}
-.menu__tittle--icon-black {
-  position: absolute;
-  bottom: 14px;
-}
-.menu__tittle--icon-black:hover {
-  color: purple;
-  transform: translateY(100%);
-}
 .menu__types {
   border-bottom: 3px solid #99E2D0;
   width: 50px;
@@ -257,10 +226,6 @@
   flex-direction: column;
   gap: 16px;
   padding: 0px 20px 0px 20px;
-}
-.menu__list:nth-child(2) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 .menu__list--items {
   background-color: #fff;
@@ -377,15 +342,11 @@
     height: 230px;
   }
   .menu-card__text {
-    padding: 0px 16px 0px 16px;
+    padding: 0px 16px 0px 5px;
   }
   .menu-card__text--icon {
-    font-size: 30px;
-    transition: transform 250ms ease-in-out;
-  }
-  .menu-card__text--icon-black {
-    position: absolute;
-    bottom: 3px;
+    width: 30px;
+    height: 32px;
   }
   .logo {
     gap: 40%;
@@ -448,12 +409,8 @@
   }
   .menu-card__text--icon {
     font-size: 30px;
-    width: 40px;
-    transition: transform 250ms ease-in-out;
-  }
-  .menu-card__text--icon-black {
-    position: absolute;
-    bottom: 3px;
+    width: 30px;
+    height: 32px;
   }
   .logo {
     gap: 40%;
@@ -476,8 +433,8 @@
     padding: 0px 80px 0px 80px;
     flex-direction: row;
   }
-  .menu__list--items {
-    height: 65px;
+  .delay4 > .price {
+    top: 20px;
   }
   .footer {
     padding-left: 16px;
@@ -587,21 +544,61 @@
     transform: translateY(0px);
   }
 }
-.menu__list:nth-child(1) {
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
+.delay1 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
-.menu__list:nth-child(2) {
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+.delay2 {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
-.menu__list:nth-child(3) {
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
+.delay3 {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
+.delay4 {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@-webkit-keyframes heart-fadein {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heart-fadein {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html,
 body {
   box-sizing: border-box;
@@ -622,10 +619,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  -webkit-animation: page_loader 7s forwards;
-          animation: page_loader 7s forwards;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+  -webkit-animation: page_loader 3s forwards;
+          animation: page_loader 3s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 .homepage-loader .spinner {
   width: 70px;
@@ -633,8 +630,8 @@ body {
   border: 3px solid #dddddd;
   border-top-color: #009578;
   border-radius: 50%;
-  -webkit-animation: spinner 5s ease infinite;
-          animation: spinner 5s ease infinite;
+  -webkit-animation: spinner 3s ease infinite;
+          animation: spinner 3s ease infinite;
 }
 
 img {
