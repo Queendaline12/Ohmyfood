@@ -1,3 +1,4 @@
+/* menu page logo with arrow icon */
 .logo {
     display: flex;
     background-color: $text-color;
@@ -9,6 +10,7 @@
     }
 }
 
+/* menu page container */
 .menu {
     width: 100%;
 
@@ -19,6 +21,7 @@
         z-index: -1;
     }
 
+    /* the details class contains: menu name, heart button and dishes */
     &__details {
         background-color: $backgd-color;
         margin-top: -50px;
@@ -29,16 +32,16 @@
 
     }
 
+    /* menu name */
     &__tittle {
         @include center;
         justify-content: flex-start;
         justify-content: space-between;
         padding: 0px 30px 0px 16px;
-        font-family: "Shrikhand";
-
-
+        font-family: 'Shrikhand';
     }
 
+    /* names of the dishes */
     &__types {
         border-bottom: 3px solid $tertiary-color;
         width: 50px;
@@ -47,6 +50,7 @@
 
     }
 
+    /* dishes container */
     &__list {
         @include center;
         flex-direction: column;
@@ -54,10 +58,11 @@
         padding: 0px 20px 0px 20px;
 
 
+        /* dishes block with the name and price */
         &--items {
             background-color: $text-color;
             border-radius: 16px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            @include box-shadow;
             cursor: pointer;
             text-decoration: none;
             padding-left: 16px;
@@ -66,8 +71,18 @@
             height: 60px;
             overflow: hidden;
             position: relative;
-            animation: items-loader .6s ease-in-out;
+            animation: items-loader $anim-duration backwards;
 
+            @for $i from 1 through 4 {
+                &--#{$i} {
+                    animation-delay: 100ms * $i;
+                }
+            }
+
+            &-text {
+                font-size: 15px;
+                color: #000000
+            }
 
             h4 {
                 margin: 5px 0%;
@@ -78,9 +93,10 @@
                 position: absolute;
                 right: 8px;
                 top: 45px;
-                transition: all .6s ease-in-out;
+                @include transition;
             }
 
+            /* checkmark effect that appear to the right of the dish on hovering */
             &:hover {
                 .menu__list--items-text {
                     width: 50%;
@@ -111,6 +127,7 @@
 
         }
 
+        /* the selecting checkmark that appears to the right of the dish */
         &--select {
             background-color: $tertiary-color;
             width: 15px;
@@ -123,11 +140,12 @@
             right: 0px;
             top: 0px;
             transform: translateX(100%);
-            transition: all .6s ease-in-out;
+            @include transition;
 
+            /* the rotating circle-check icon */
             i {
                 font-size: 30px;
-                transition: all .6s ease-in-out;
+                @include transition;
             }
 
 
@@ -135,7 +153,7 @@
 
     }
 
-
+    /* the order button */
     &__order {
         background-color: $backgd-color;
         @include center;
@@ -147,12 +165,13 @@
             padding: 10px;
             text-align: center;
             color: white;
-
             border-radius: 25px;
             margin: 50px;
-            transition: all .6s ease-in-out;
+            @include transition;
             cursor: pointer;
+            @include box-shadow;
 
+            /* the hover effect on the order button */
             &:hover {
                 transform: scale(1.25);
                 background: linear-gradient(90deg, #FF79DA 30%, #9356DC);

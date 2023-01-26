@@ -1,8 +1,17 @@
+/* scss partials */ /* mixin to display flex box */
+/* mixin to display grid in row direction */
+/* mixin to display grid in column direction */
+/* mixin for box shadow */
+/* mixin for transition */
+/* mixin for tablet media query */
+/* mixin for desktop media query */
+/* logo image */
 .header-logo > img {
   width: 200px;
   padding: 16px 0px;
 }
 
+/* The site locatoin and the icon */
 .location {
   display: flex;
   justify-content: center;
@@ -15,6 +24,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Berif discription of the company */
 .advert-text {
   display: flex;
   justify-content: center;
@@ -43,8 +53,10 @@
 
 .discription {
   padding-left: 16px;
+  font-weight: bold;
 }
 
+/* The discription of how it works section */
 .list {
   list-style: none;
   -webkit-padding-start: 0px;
@@ -71,7 +83,6 @@
   gap: 10px;
   position: relative;
   cursor: pointer;
-  transition: all 0.6s ease-in-out;
 }
 .list__items:hover .list__icon {
   color: #9356DC;
@@ -97,13 +108,16 @@
   font-size: large;
 }
 
+/* menu cards container */
 .menu-container {
   background-color: #F2F2F2;
 }
 .menu-container__tittle {
   padding: 16px;
+  font-size: 25px;
 }
 
+/* cards container */
 .menus {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
@@ -112,6 +126,7 @@
   padding-bottom: 30px;
 }
 
+/* The card's image and the button new */
 .menu-card__img {
   width: 100%;
   height: 180px;
@@ -131,6 +146,7 @@
   right: 20px;
 }
 
+/* The cards, card name, heart button and location */
 .menu-card {
   width: 300px;
   height: 250px;
@@ -141,6 +157,7 @@
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
+  z-index: 2;
 }
 .menu-card__text {
   display: flex;
@@ -151,23 +168,21 @@
   padding: 0px 16px 0px 16px;
   position: relative;
 }
-.menu-card__texth2 {
-  font-size: 16px;
-}
 .menu-card__text--icon {
   transition: transform 0.6s ease-in-out;
   overflow: hidden;
   position: relative;
   width: 20px;
-  height: 20px;
+  height: 25px;
+  margin-top: 10px;
 }
 .menu-card__text--icon-purple {
   color: #800080;
   opacity: 0;
 }
 .menu-card__text--icon-purple:hover {
-  -webkit-animation: heart-fadein 5s forwards;
-          animation: heart-fadein 5s forwards;
+  -webkit-animation: heart-fadein 0.6s forwards;
+          animation: heart-fadein 0.6s forwards;
   transform: translateY(0);
 }
 .menu-card__text--icon-black {
@@ -181,6 +196,7 @@
   padding-left: 16px;
 }
 
+/* menu page logo with arrow icon */
 .logo {
   display: flex;
   background-color: #fff;
@@ -191,9 +207,15 @@
   width: 150px;
 }
 
+/* menu page container */
 .menu {
   width: 100%;
   position: relative;
+  /* the details class contains: menu name, heart button and dishes */
+  /* menu name */
+  /* names of the dishes */
+  /* dishes container */
+  /* the order button */
 }
 .menu__img {
   position: relative;
@@ -229,6 +251,8 @@
   flex-direction: column;
   gap: 16px;
   padding: 0px 20px 0px 20px;
+  /* dishes block with the name and price */
+  /* the selecting checkmark that appears to the right of the dish */
 }
 .menu__list--items {
   background-color: #fff;
@@ -242,8 +266,29 @@
   height: 60px;
   overflow: hidden;
   position: relative;
-  -webkit-animation: items-loader 0.6s ease-in-out;
-          animation: items-loader 0.6s ease-in-out;
+  -webkit-animation: items-loader 1000ms backwards;
+          animation: items-loader 1000ms backwards;
+  /* checkmark effect that appear to the right of the dish on hovering */
+}
+.menu__list--items--1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+.menu__list--items--2 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.menu__list--items--3 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.menu__list--items--4 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+.menu__list--items-text {
+  font-size: 15px;
+  color: #000000;
 }
 .menu__list--items h4 {
   margin: 5px 0%;
@@ -286,6 +331,7 @@
   top: 0px;
   transform: translateX(100%);
   transition: all 0.6s ease-in-out;
+  /* the rotating circle-check icon */
 }
 .menu__list--select i {
   font-size: 30px;
@@ -308,16 +354,20 @@
   margin: 50px;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* the hover effect on the order button */
 }
 .menu__order--text:hover {
   transform: scale(1.25);
   background: linear-gradient(90deg, #FF79DA 30%, #9356DC);
 }
 
+/* tablet design section */
 @media (min-width: 768px) and (max-width: 992px) {
   body {
     font-size: 20px;
   }
+  /* The discription section, change the font size */
   .advert-text {
     font-size: 22px;
     padding-bottom: 16px;
@@ -325,10 +375,15 @@
   .advert-text__btn {
     font-size: 16px;
   }
+  /* How it works tablet design section */
+  .discription {
+    text-align: center;
+  }
   .list__items {
-    width: 100%;
+    width: 400px;
     gap: 30px;
   }
+  /* Cards container tablet design section */
   .menus {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -336,6 +391,7 @@
     place-items: center;
     width: 100%;
   }
+  /* cards for tablet design section */
   .menu-card {
     width: 90%;
     height: 300px;
@@ -350,10 +406,12 @@
     width: 30px;
     height: 32px;
   }
+  /* the menu-page header logo for the tablet design */
   .logo {
     gap: 40%;
     font-size: 20px;
   }
+  /* menu-page image */
   .menu__img {
     width: 100%;
     height: 350px;
@@ -361,6 +419,7 @@
   .menu__tittle--icon {
     font-size: 30px;
   }
+  /* footer section for the tablet design */
   .footer {
     padding-left: 16px;
   }
@@ -368,6 +427,7 @@
     width: 100%;
   }
 }
+/* Desktop design section */
 @media (min-width: 992px) {
   body {
     font-size: 20px;
@@ -385,36 +445,24 @@
   .discription {
     text-align: center;
   }
-  .list__items {
-    width: 500px;
-    gap: 30px;
+  .list {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
   .menu-container__tittle {
     text-align: center;
   }
   .menus {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
-  }
-  .menu-card {
-    width: 500px;
-    height: 380px;
-  }
-  .menu-card__img {
-    height: 300px;
-  }
-  .menu-card__text--icon {
-    font-size: 30px;
-    width: 30px;
-    height: 32px;
+    height: 350px;
   }
   .logo {
     gap: 40%;
     font-size: 20px;
   }
+  /* menu-page image */
   .menu__img {
     width: 100%;
     height: 550px;
@@ -428,6 +476,7 @@
   .menu__types {
     margin: 16px 80px 16px 80px;
   }
+  /* menu-page dishes section */
   .menu__list {
     padding: 0px 80px 0px 80px;
     flex-direction: row;
@@ -435,6 +484,7 @@
   .delay4 > .price {
     top: 20px;
   }
+  /* footer section for the desktop design */
   .footer {
     padding-left: 16px;
   }
@@ -452,6 +502,7 @@
     padding: 16px 0px;
   }
 }
+/* the home page loading animation  */
 @-webkit-keyframes page_loader {
   0% {
     opacity: 1;
@@ -459,9 +510,11 @@
   }
   20% {
     opacity: 0.8;
+    z-index: 3;
   }
   50% {
     opacity: 0.3;
+    z-index: 3;
   }
   100% {
     opacity: 0;
@@ -476,9 +529,11 @@
   }
   20% {
     opacity: 0.8;
+    z-index: 3;
   }
   50% {
     opacity: 0.3;
+    z-index: 3;
   }
   100% {
     opacity: 0;
@@ -486,6 +541,7 @@
     visibility: hidden;
   }
 }
+/* the home page loading spinner animation */
 @-webkit-keyframes spinner {
   from {
     transform: rotate(0turn);
@@ -502,6 +558,7 @@
     transform: rotate(1turn);
   }
 }
+/* the dish loading animation */
 @-webkit-keyframes items-loader {
   0% {
     opacity: 0;
@@ -540,26 +597,7 @@
     transform: translateY(0px);
   }
 }
-.delay1 {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.delay2 {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.delay3 {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-
-.delay4 {
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
+/* the heart button animation */
 @-webkit-keyframes heart-fadein {
   0% {
     opacity: 0;
@@ -577,7 +615,6 @@
     opacity: 1;
   }
 }
-
 @keyframes heart-fadein {
   0% {
     opacity: 0;
@@ -603,8 +640,11 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  font-family: "Roboto";
+  font-weight: 100;
 }
 
+/* The homepage loader */
 .homepage-loader {
   position: fixed;
   top: 0;
@@ -619,6 +659,8 @@ body {
           animation: page_loader 3s forwards;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+  z-index: 1000;
+  /* the loading spinner */
 }
 .homepage-loader .spinner {
   width: 70px;
@@ -630,6 +672,7 @@ body {
           animation: spinner 3s ease infinite;
 }
 
+/* The image width and height set to 100% */
 img {
   width: 100%;
   height: 100%;
@@ -645,6 +688,7 @@ h2 {
   font-size: 20px;
 }
 
+/* the header logo for all the pages */
 .header-logo {
   display: flex;
   justify-content: center;
@@ -654,6 +698,7 @@ h2 {
   width: 100%;
 }
 
+/* footer section for all the pages */
 .footer {
   color: #fff;
   padding: 16px 0px 40px 16px;

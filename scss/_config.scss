@@ -1,21 +1,44 @@
+/* mixin to display flex box */
 @mixin center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* mixin to display grid in row direction */
 @mixin grid-row {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     place-items: center;
 }
 
+/* mixin to display grid in column direction */
+@mixin grid-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    width: 100%;
+}
+
+/* mixin for box shadow */
+@mixin box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* mixin for transition */
+@mixin transition {
+    transition: all .6s ease-in-out;
+}
+
+/* mixin for tablet media query */
 @mixin media-md {
     @media (min-width: 768px) and (max-width: 992px) {
         @content;
     }
 }
 
+/* mixin for desktop media query */
 @mixin media-lg {
     @media (min-width: 992px) {
         @content;
