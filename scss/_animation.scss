@@ -1,3 +1,4 @@
+/* the home page loading animation  */
 @keyframes page_loader {
     0% {
         opacity: 1;
@@ -7,10 +8,12 @@
 
     20% {
         opacity: 0.8;
+        z-index: 3;
     }
 
     50% {
         opacity: 0.3;
+        z-index: 3;
     }
 
     100% {
@@ -20,6 +23,7 @@
     }
 }
 
+/* the home page loading spinner animation */
 @keyframes spinner {
     from {
         transform: rotate(0turn);
@@ -30,6 +34,7 @@
     }
 }
 
+/* the dish loading animation */
 @keyframes items-loader {
     0% {
         opacity: 0;
@@ -54,23 +59,11 @@
     }
 }
 
-.delay1 {
-    animation-duration: 1s;
-}
-
-.delay2 {
-    animation-duration: 2s;
-}
-
-.delay3 {
-    animation-duration: 3s;
-}
 
 
-.delay4 {
-    animation-duration: 4s;
-}
 
+
+/* the heart button animation */
 @keyframes heart-fadein {
     0% {
         opacity: 0;
