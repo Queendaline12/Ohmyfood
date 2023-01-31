@@ -500,6 +500,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding: 16px 0px;
+    color: white;
   }
 }
 /* the home page loading animation  */
@@ -715,6 +716,9 @@ h2 {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+}
+.footer__icon--text > a {
+  color: #fff;
 }
 .footer__contacts > a {
   color: #fff;
